@@ -1,45 +1,43 @@
-👋 Hi there, I'm Lanor Jephthah Kwame!
+# InclusiVoice Prototype
 
-Welcome to my GitHub profile. I'm excited to share my journey, projects, and learnings with the world here.
+InclusiVoice is a desktop accessibility prototype for virtual interviews. It helps users with speech or communication difficulties by providing:
 
-💡 About Me
-🎓 Background: Computer Engineering undergraduate student with a passion for NLP and Machine Learning
+- Live interview question transcript (prototype stream)
+- Context-aware response suggestions
+- Editable response drafting
+- Optional text-to-speech playback
+- Non-intrusive topmost overlay interface with panic hide
 
-🛠 Currently Exploring:
-Machine Learning & Natural Language Processing
-Data Analysis & Visualization
-Python and other cutting-edge tech
+## Project Structure
 
-🌱 Currently Learning:
-Advanced NLP techniques (Transformer models, embeddings, etc.)
-Deployment strategies for ML models using Docker & cloud services
+- `app.py` — entry point
+- `inclusivoice/audio.py` — audio ingestion abstraction + simulated stream
+- `inclusivoice/stt.py` — speech-to-text service interface (prototype pass-through)
+- `inclusivoice/nlp.py` — question classification + response generation
+- `inclusivoice/tts.py` — TTS service (pyttsx3 optional)
+- `inclusivoice/ui.py` — Tkinter desktop overlay UI
+- `tests/test_nlp.py` — basic NLP unit tests
+- `InclusiVoice_Technical_Spec.md` — full technical case study specification
 
-💬 Ask me about:
-NLP pipelines, data preprocessing, and AI model development.
-Open-source contributions and collaboration opportunities!
+## Quick Start
 
-🚀 Skills & Technologies
-Here’s a quick glimpse at the tools and skills I use:
+```bash
+python -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+python app.py
+```
 
-Languages: Python, SQL
-Frameworks & Libraries: Scikit-learn, Pandas, NumPy, SpaCy
-Data Visualization: Matplotlib, Seaborn, Plotly
-Cloud Platforms: AWS, GCP, Azure (learning phase)
-Tools & Skills: Git, PyCharm, Jupyter Notebook, Data wrangling & pipeline design
-NLP pipelines or projects related to real-world datasets
-Exploring how ML models can solve practical industry problems
+Then click **Start Simulated Interview** to run the end-to-end prototype flow.
 
-📫 Connect With Me
-I'm always happy to connect with like-minded professionals, learners, and open-source enthusiasts!
+## Notes
 
+- This prototype uses simulated interview input for deterministic testing.
+- `pyttsx3` is optional at runtime; if unavailable, the app still runs without voice output.
+- For production, replace simulated ingestion with platform loopback capture and streaming ASR.
 
+## Testing
 
-Feel free to connect with me or reach out with opportunities, collaborations, or exciting projects!
-
-💬 Fun Fact
-I believe the journey of learning is just as exciting as the destination. Every line of code is an opportunity to build something innovative. 😄
-
-<!---
-Lanor-Jephthah1/Lanor-Jephthah1 is a ✨ special ✨ repository because its README.md (this file) appears on your GitHub profile.
-You can click the Preview link to take a look at your changes.
---->
+```bash
+python -m pytest -q
+```
