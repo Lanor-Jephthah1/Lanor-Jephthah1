@@ -1,45 +1,160 @@
-👋 Hi there, I'm Lanor Jephthah Kwame!
+<div align="center">
+  <!-- Animated Bubble Header Banner -->
+  <img src="header.svg" width="100%" alt="Jephthah Kwame Lanor Banner" />
+  
+  <br/>
+  
+  <!-- Interactive Connect Badges -->
+  <a href="mailto:mclanorjeff@gmail.com">
+    <img src="https://img.shields.io/badge/Email-mclanorjeff%40gmail.com-00f2fe?style=for-the-badge&logo=gmail&logoColor=black&labelColor=0d0c1d&shadow=true" alt="Email" />
+  </a>
+  <a href="https://linkedin.com/in/lanor-jephthah">
+    <img src="https://img.shields.io/badge/LinkedIn-Lanor--Jephthah-4facfe?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=0d0c1d" alt="LinkedIn" />
+  </a>
+  <a href="https://github.com/lanor-jephthah1">
+    <img src="https://img.shields.io/badge/GitHub-Lanor--Jephthah1-a855f7?style=for-the-badge&logo=github&logoColor=white&labelColor=0d0c1d" alt="GitHub" />
+  </a>
+</div>
 
-Welcome to my GitHub profile. I'm excited to share my journey, projects, and learnings with the world here.
+<br/>
 
-💡 About Me
-🎓 Background: Computer Engineering undergraduate student with a passion for NLP and Machine Learning
+<!-- Floating Bubble Section Divider -->
+<img src="bubbles.svg" width="100%" alt="Section Divider" />
 
-🛠 Currently Exploring:
-Machine Learning & Natural Language Processing
-Data Analysis & Visualization
-Python and other cutting-edge tech
+## 🌟 About Me
 
-🌱 Currently Learning:
-Advanced NLP techniques (Transformer models, embeddings, etc.)
-Deployment strategies for ML models using Docker & cloud services
+I am a **Computer Engineering** student at the **University of Energy and Natural Resources (UENR)** in Ghana, with a deep passion for **Artificial Intelligence, Natural Language Processing (NLP), and low-resource African language technologies**. 
 
-💬 Ask me about:
-NLP pipelines, data preprocessing, and AI model development.
-Open-source contributions and collaboration opportunities!
+Experienced in developing end-to-end AI applications, custom-tuning LLMs, and building robust full-stack desktop and web automation. I combine mathematical modeling, low-level hardware intuition, and state-of-the-art deep learning workflows to solve tangible, real-world problems.
 
-🚀 Skills & Technologies
-Here’s a quick glimpse at the tools and skills I use:
+*   🎓 **Education**: BSc Computer Engineering @ UENR (Expected Oct. 2026)
+*   🔬 **Research Focus**: Quantized Fine-Tuning (QLoRA), Machine Translation for Ghanaian languages, and Distributed Systems
+*   ⚡ **Motto**: *Innovating at the intersection of AI, hardware engineering, and language preservation.*
 
-Languages: Python, SQL
-Frameworks & Libraries: Scikit-learn, Pandas, NumPy, SpaCy
-Data Visualization: Matplotlib, Seaborn, Plotly
-Cloud Platforms: AWS, GCP, Azure (learning phase)
-Tools & Skills: Git, PyCharm, Jupyter Notebook, Data wrangling & pipeline design
-NLP pipelines or projects related to real-world datasets
-Exploring how ML models can solve practical industry problems
+---
 
-📫 Connect With Me
-I'm always happy to connect with like-minded professionals, learners, and open-source enthusiasts!
+## 🛠️ Technical Arsenal
 
+<div align="left">
+  <table>
+    <tr>
+      <td valign="top" width="50%">
+        <strong>💻 Programming Languages &amp; Core</strong><br/>
+        <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python" />
+        <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" alt="JavaScript" />
+        <img src="https://img.shields.io/badge/MATLAB-ED1C24?style=flat-square&logo=mathworks&logoColor=white" alt="MATLAB" />
+        <img src="https://img.shields.io/badge/SQL-4479A1?style=flat-square&logo=postgresql&logoColor=white" alt="SQL" />
+        <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white" alt="HTML5" />
+        <img src="https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white" alt="CSS3" />
+      </td>
+      <td valign="top" width="50%">
+        <strong>🧠 Machine Learning &amp; NLP</strong><br/>
+        <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white" alt="PyTorch" />
+        <img src="https://img.shields.io/badge/Hugging_Face-FFD21E?style=flat-square&logo=huggingface&logoColor=black" alt="Hugging Face" />
+        <img src="https://img.shields.io/badge/QLoRA%20/%20LoRA-a855f7?style=flat-square" alt="QLoRA" />
+        <img src="https://img.shields.io/badge/LLM_Finetuning-00f2fe?style=flat-square" alt="LLM Finetuning" />
+        <img src="https://img.shields.io/badge/Data_Analytics-4facfe?style=flat-square" alt="Data Analytics" />
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" width="50%">
+        <strong>🗄️ Databases &amp; Cloud Deployment</strong><br/>
+        <img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white" alt="PostgreSQL" />
+        <img src="https://img.shields.io/badge/MongoDB-47A248?style=flat-square&logo=mongodb&logoColor=white" alt="MongoDB" />
+        <img src="https://img.shields.io/badge/AWS-232F3E?style=flat-square&logo=amazon-aws&logoColor=white" alt="AWS" />
+        <img src="https://img.shields.io/badge/Vercel-000000?style=flat-square&logo=vercel&logoColor=white" alt="Vercel" />
+        <img src="https://img.shields.io/badge/Firebase-FFCA28?style=flat-square&logo=firebase&logoColor=black" alt="Firebase" />
+      </td>
+      <td valign="top" width="50%">
+        <strong>🔌 Hardware &amp; Automation</strong><br/>
+        <img src="https://img.shields.io/badge/AutoCAD-E2231A?style=flat-square&logo=autodesk&logoColor=white" alt="AutoCAD" />
+        <img src="https://img.shields.io/badge/Proteus-0052cc?style=flat-square" alt="Proteus Simulation" />
+        <img src="https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white" alt="Git" />
+        <img src="https://img.shields.io/badge/Windows_Automation-0078D6?style=flat-square&logo=windows&logoColor=white" alt="Windows Automation" />
+      </td>
+    </tr>
+  </table>
+</div>
 
+<br/>
 
-Feel free to connect with me or reach out with opportunities, collaborations, or exciting projects!
+<!-- Floating Bubble Section Divider -->
+<img src="bubbles.svg" width="100%" alt="Section Divider" />
 
-💬 Fun Fact
-I believe the journey of learning is just as exciting as the destination. Every line of code is an opportunity to build something innovative. 😄
+## 🚀 Highlighted Projects
 
-<!---
-Lanor-Jephthah1/Lanor-Jephthah1 is a ✨ special ✨ repository because its README.md (this file) appears on your GitHub profile.
-You can click the Preview link to take a look at your changes.
---->
+### 🇬🇭 [NLLB-Twi-QLoRA Translation Model](https://github.com/Lanor-Jephthah1/NLLB-Twi-QLoRA)
+*An advanced translation pipeline designed to bridge Twi (Ghanaian native language) and English.*
+*   **Technologies**: Python, PyTorch, Hugging Face `transformers`, Peft (QLoRA), NLLB-200.
+*   **Features**: Fine-tuned Meta's No Language Left Behind (NLLB) model using quantized parameter-efficient tuning. Leveraged a custom-polished bilingual corpus to optimize BLEU and ChrF scores for low-resource translation. Includes interactive Gradio interface.
+
+### 💬 Echo AI – Companion Chatbot
+*A highly responsive, contextual AI companion built for natural, real-time conversations.*
+*   **Technologies**: Next.js, Node.js, Vercel, TailwindCSS, LLM APIs.
+*   **Features**: Real-time streaming API responses, long-term memory integration, and beautiful glassmorphic UI. Optimized using Vercel serverless functions with dynamic domain configurations.
+
+### 🎓 SukuuPath Platform
+*An AI-powered academic advisor and career recommendation platform designed for African students.*
+*   **Accomplishments**: Selected to be presented at the **3rd International AI Conference at Walsh University (April 2026)**.
+*   **Features**: Leverages student transcripts, personal interests, and local market trends to recommend personalized educational paths, courses, and job resources.
+
+---
+
+## 🛠️ Repository Project: Smart File Organizer + Jarvis GUI
+
+This repository hosts an automated local toolkit built to streamline Windows desktop organization and system maintenance.
+
+<details>
+<summary>📂 Click to view original project documentation</summary>
+
+### Features
+*   **File Organizer (`main.py`)**:
+    *   Sort files by category (`images`, `videos`, `documents`, `code`, etc.) or custom mode.
+    *   SHA-256 duplicate detection with routing to a dedicated duplicates folder.
+    *   Dry-run mode, folder watch, and safe collision handling.
+*   **Jarvis GUI Assistant (`jarvis.py`)**:
+    *   Desktop GUI wrapper to run routine cleanups, check logs, and manage configuration.
+    *   Includes CLI and one-shot execution modes.
+
+### Quick Start
+1.  **Run Organizer**:
+    ```powershell
+    python main.py --source "%USERPROFILE%\Downloads" --destination "%USERPROFILE%\Downloads\Organized"
+    ```
+2.  **Run Jarvis Assistant**:
+    ```powershell
+    python jarvis.py
+    ```
+
+</details>
+
+<br/>
+
+<!-- Floating Bubble Section Divider -->
+<img src="bubbles.svg" width="100%" alt="Section Divider" />
+
+## 💼 Relevant Experience
+
+*   **Volta River Authority, Akosombo** | *MIS Intern* (Oct 2025 - Dec 2025 &amp; Nov 2024 - Dec 2024)
+    *   Managed server room switch patching, Cat6 termination, and Hydro Generation Station IT troubleshooting.
+    *   Deployed Oracle Fusion ERP suites and streamlined secure domain user onboarding workflows.
+*   **100 Days of Code | The App Brewery** | *Software Developer Intern* (Oct 2023 - Jan 2024)
+    *   Completed comprehensive programming training in Python scripting, web scraping, and automation logic.
+*   **Manya Krobo Senior High School** | *NSMQ Team Lead* (Jan 2022 - Jun 2022)
+    *   Led academic preparation and coordination for the prestigious National Science &amp; Maths Quiz (NSMQ).
+
+---
+
+## 🏆 Honors &amp; Certifications
+
+*   🏅 **IBM Generative AI Engineering Professional Certificate** (Coursera, Jan 2026 - Present)
+*   🎤 **Presenter** @ *3rd International AI Conference*, Walsh University (April 2026)
+*   🥈 **2nd Place Qualifier** @ *NSMQ Eastern Regional Qualifiers* (May 2022)
+
+---
+
+<div align="center">
+  <!-- Bottom bubble divider to wrap up the profile styling -->
+  <img src="bubbles.svg" width="100%" alt="Bottom Divider" />
+  <p><i>Thanks for stopping by! Keep on floating high! 🎈</i></p>
+</div>

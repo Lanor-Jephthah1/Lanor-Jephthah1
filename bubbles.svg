@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 830 65" width="100%" height="100%">
+  <defs>
+    <!-- Bubble radial gradient for natural lighting & refraction -->
+    <radialGradient id="bubbleDividerGrad" cx="35%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="rgba(255, 255, 255, 0.4)" />
+      <stop offset="30%" stop-color="rgba(0, 242, 254, 0.22)" />
+      <stop offset="75%" stop-color="rgba(168, 85, 247, 0.08)" />
+      <stop offset="100%" stop-color="rgba(0, 0, 0, 0)" />
+    </radialGradient>
+  </defs>
+
+  <style>
+    /* Bubble ascending float & side drift keyframe animation */
+    @keyframes floatUpDivider {
+      0% { transform: translateY(75px) translateX(0); opacity: 0; }
+      15% { opacity: 0.65; }
+      85% { opacity: 0.65; }
+      100% { transform: translateY(-15px) translateX(25px); opacity: 0; }
+    }
+
+    @keyframes floatUpDividerLeft {
+      0% { transform: translateY(75px) translateX(0); opacity: 0; }
+      15% { opacity: 0.55; }
+      85% { opacity: 0.55; }
+      100% { transform: translateY(-15px) translateX(-25px); opacity: 0; }
+    }
+
+    .div-bubble {
+      fill: url(#bubbleDividerGrad);
+      stroke: rgba(255, 255, 255, 0.18);
+      stroke-width: 0.6px;
+      transform-origin: center;
+    }
+
+    /* Assigning varied floating animations, speeds, and negative delays for immediate continuous display */
+    .db1 { animation: floatUpDivider 8s infinite linear; }
+    .db2 { animation: floatUpDividerLeft 11s infinite linear; }
+    .db3 { animation: floatUpDivider 6s infinite linear; }
+    .db4 { animation: floatUpDividerLeft 9s infinite linear; }
+  </style>
+
+  <!-- Transparent background container -->
+  <rect width="100%" height="100%" fill="none" />
+
+  <!-- A subtle purple/blue horizontal gradient line to ground the divider -->
+  <line x1="15" y1="32" x2="815" y2="32" stroke="rgba(79, 172, 254, 0.15)" stroke-width="1" />
+  <line x1="300" y1="32" x2="530" y2="32" stroke="rgba(168, 85, 247, 0.3)" stroke-width="1.5" />
+
+  <!-- Animated Bubbles across the horizontal line -->
+  <circle cx="50" cy="0" r="7" class="div-bubble db1" style="animation-delay: -1.5s;" />
+  <circle cx="120" cy="0" r="11" class="div-bubble db2" style="animation-delay: -5.0s;" />
+  <circle cx="190" cy="0" r="5" class="div-bubble db3" style="animation-delay: -0.5s;" />
+  <circle cx="260" cy="0" r="9" class="div-bubble db4" style="animation-delay: -7.2s;" />
+  <circle cx="320" cy="0" r="6" class="div-bubble db1" style="animation-delay: -3.0s;" />
+  
+  <circle cx="390" cy="0" r="12" class="div-bubble db2" style="animation-delay: -8.5s;" />
+  <circle cx="440" cy="0" r="8" class="div-bubble db3" style="animation-delay: -2.2s;" />
+  <circle cx="510" cy="0" r="5" class="div-bubble db4" style="animation-delay: -6.0s;" />
+  <circle cx="580" cy="0" r="10" class="div-bubble db1" style="animation-delay: -0.8s;" />
+  
+  <circle cx="640" cy="0" r="7" class="div-bubble db2" style="animation-delay: -4.3s;" />
+  <circle cx="700" cy="0" r="11" class="div-bubble db3" style="animation-delay: -9.1s;" />
+  <circle cx="770" cy="0" r="6" class="div-bubble db4" style="animation-delay: -1.8s;" />
+</svg>

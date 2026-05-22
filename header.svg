@@ -1,0 +1,175 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 830 260" width="100%" height="100%">
+  <defs>
+    <!-- Modern Deep Indigo and Violet Space Gradient -->
+    <linearGradient id="spaceGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070614" />
+      <stop offset="40%" stop-color="#0e0c24" />
+      <stop offset="80%" stop-color="#19143a" />
+      <stop offset="100%" stop-color="#24174d" />
+    </linearGradient>
+
+    <!-- Translucent Glowing Bubble Gradient (Cyan to Purple) -->
+    <radialGradient id="glowBubbleCyan" cx="35%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="rgba(255, 255, 255, 0.45)" />
+      <stop offset="25%" stop-color="rgba(0, 242, 254, 0.35)" />
+      <stop offset="70%" stop-color="rgba(79, 172, 254, 0.12)" />
+      <stop offset="100%" stop-color="rgba(0, 0, 0, 0)" />
+    </radialGradient>
+
+    <radialGradient id="glowBubblePurple" cx="35%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="rgba(255, 255, 255, 0.45)" />
+      <stop offset="25%" stop-color="rgba(168, 85, 247, 0.35)" />
+      <stop offset="70%" stop-color="rgba(236, 72, 153, 0.12)" />
+      <stop offset="100%" stop-color="rgba(0, 0, 0, 0)" />
+    </radialGradient>
+
+    <!-- Text Gradient (Teal to Blue to Violet) -->
+    <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f2fe" />
+      <stop offset="40%" stop-color="#4facfe" />
+      <stop offset="80%" stop-color="#a855f7" />
+      <stop offset="100%" stop-color="#ec4899" />
+    </linearGradient>
+
+    <!-- Glowing Drop Shadows -->
+    <filter id="neonGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <style>
+    /* Google Fonts Import for Premium Typography */
+    @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&amp;family=Inter:wght@400;500;700&amp;display=swap');
+
+    /* Bubble Floating Keyframe Animations (Combined vertical and side-to-side drift) */
+    @keyframes floatUp1 {
+      0% { transform: translateY(280px) translateX(0); opacity: 0; }
+      10% { opacity: 0.7; }
+      90% { opacity: 0.7; }
+      100% { transform: translateY(-40px) translateX(-40px); opacity: 0; }
+    }
+    
+    @keyframes floatUp2 {
+      0% { transform: translateY(280px) translateX(0); opacity: 0; }
+      15% { opacity: 0.5; }
+      85% { opacity: 0.5; }
+      100% { transform: translateY(-40px) translateX(50px); opacity: 0; }
+    }
+
+    @keyframes floatUp3 {
+      0% { transform: translateY(280px) translateX(0); opacity: 0; }
+      20% { opacity: 0.6; }
+      80% { opacity: 0.6; }
+      100% { transform: translateY(-40px) translateX(-20px); opacity: 0; }
+    }
+
+    @keyframes floatUp4 {
+      0% { transform: translateY(280px) translateX(0); opacity: 0; }
+      10% { opacity: 0.8; }
+      90% { opacity: 0.8; }
+      100% { transform: translateY(-40px) translateX(30px); opacity: 0; }
+    }
+
+    /* Ambient Pulsing Background Glows */
+    @keyframes pulseGlow {
+      0%, 100% { opacity: 0.2; transform: scale(1); }
+      50% { opacity: 0.4; transform: scale(1.1); }
+    }
+
+    .bubble {
+      stroke: rgba(255, 255, 255, 0.25);
+      stroke-width: 0.75px;
+      transform-origin: center;
+    }
+
+    .b-cyan { fill: url(#glowBubbleCyan); }
+    .b-purple { fill: url(#glowBubblePurple); }
+
+    /* Bubble Speeds and Delays (Negative delays ensure some bubbles are already visible on load) */
+    .b1 { animation: floatUp1 14s infinite linear; }
+    .b2 { animation: floatUp2 18s infinite linear; }
+    .b3 { animation: floatUp3 11s infinite linear; }
+    .b4 { animation: floatUp4 22s infinite linear; }
+
+    /* Background Ambient Lights */
+    .ambient-light {
+      animation: pulseGlow 10s infinite ease-in-out;
+      transform-origin: center;
+    }
+
+    /* Typography Styles */
+    .title-name {
+      font-family: 'Outfit', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      font-weight: 800;
+      font-size: 38px;
+      fill: url(#textGrad);
+      filter: url(#neonGlow);
+      letter-spacing: 3px;
+    }
+
+    .subtitle {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      font-weight: 600;
+      font-size: 13px;
+      fill: #a2a1bc;
+      letter-spacing: 4px;
+      opacity: 0.95;
+    }
+
+    .details {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      font-weight: 400;
+      font-size: 11px;
+      fill: #6d6b8d;
+      letter-spacing: 2px;
+    }
+  </style>
+
+  <!-- Background Base -->
+  <rect width="100%" height="100%" fill="url(#spaceGrad)" rx="16" />
+
+  <!-- Ambient Light Effects (Background Glows) -->
+  <circle cx="150" cy="130" r="120" fill="#00f2fe" opacity="0.15" class="ambient-light" style="animation-delay: 0s;" />
+  <circle cx="680" cy="130" r="140" fill="#a855f7" opacity="0.15" class="ambient-light" style="animation-delay: -5s;" />
+
+  <!-- Animated Bubbles (Evenly dispersed across the banner with negative delays for instant rendering) -->
+  <!-- Left Side -->
+  <circle cx="70" cy="0" r="18" class="bubble b-cyan b1" style="animation-delay: -3s;" />
+  <circle cx="130" cy="0" r="10" class="bubble b-purple b2" style="animation-delay: -8s;" />
+  <circle cx="190" cy="0" r="24" class="bubble b-cyan b3" style="animation-delay: -1s;" />
+  <circle cx="110" cy="0" r="14" class="bubble b-purple b4" style="animation-delay: -14s;" />
+
+  <!-- Center-Left -->
+  <circle cx="280" cy="0" r="15" class="bubble b-cyan b2" style="animation-delay: -4s;" />
+  <circle cx="340" cy="0" r="22" class="bubble b-purple b1" style="animation-delay: -11s;" />
+
+  <!-- Center-Right -->
+  <circle cx="490" cy="0" r="12" class="bubble b-purple b3" style="animation-delay: -6s;" />
+  <circle cx="560" cy="0" r="20" class="bubble b-cyan b4" style="animation-delay: -2s;" />
+
+  <!-- Right Side -->
+  <circle cx="640" cy="0" r="16" class="bubble b-purple b1" style="animation-delay: -9s;" />
+  <circle cx="710" cy="0" r="26" class="bubble b-cyan b3" style="animation-delay: -4s;" />
+  <circle cx="760" cy="0" r="11" class="bubble b-purple b2" style="animation-delay: -13s;" />
+  <circle cx="680" cy="0" r="15" class="bubble b-cyan b4" style="animation-delay: 0s;" />
+
+  <!-- Center Decorative Subtle Bubble Ring (Non-animated for depth anchor) -->
+  <circle cx="415" cy="130" r="95" fill="none" stroke="rgba(255, 255, 255, 0.03)" stroke-width="1.5" />
+  <circle cx="415" cy="130" r="105" fill="none" stroke="rgba(255, 255, 255, 0.02)" stroke-dasharray="8 6" stroke-width="1" />
+
+  <!-- Premium Typography Overlay -->
+  <g transform="translate(0, 0)">
+    <!-- Main Name -->
+    <text x="50%" y="115" dominant-baseline="middle" text-anchor="middle" class="title-name">JEPHTHAH KWAME LANOR</text>
+    
+    <!-- Professional Roles -->
+    <text x="50%" y="158" dominant-baseline="middle" text-anchor="middle" class="subtitle">AI RESEARCHER &amp; BSc COMPUTER ENGINEER</text>
+
+    <!-- Contextual Focus Areas -->
+    <text x="50%" y="195" dominant-baseline="middle" text-anchor="middle" class="details">NATURAL LANGUAGE PROCESSING • LOW-RESOURCE LANGUAGES • FULL-STACK AI DEPLOYMENT</text>
+  </g>
+</svg>
