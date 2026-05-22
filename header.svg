@@ -8,6 +8,7 @@
       --grid-color: rgba(0, 0, 0, 0.04);
       --line-color: rgba(37, 99, 235, 0.15);
       --border-color: #e5e7eb;
+      --node-color: #93c5fd;
     }
     @media (prefers-color-scheme: dark) {
       :root {
@@ -18,6 +19,7 @@
         --grid-color: rgba(255, 255, 255, 0.04);
         --line-color: rgba(96, 165, 250, 0.2);
         --border-color: #30363d;
+        --node-color: #1e3a8a;
       }
     }
     
@@ -26,61 +28,116 @@
     .name {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
       font-weight: 800;
-      font-size: 38px;
+      font-size: 36px;
       fill: var(--text-main);
-      letter-spacing: 1px;
+      letter-spacing: 0.5px;
     }
     
     .title {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
       font-weight: 600;
-      font-size: 15px;
+      font-size: 14px;
       fill: var(--accent);
       letter-spacing: 2px;
       text-transform: uppercase;
     }
     
     .details {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-      font-weight: 400;
-      font-size: 12px;
+      font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+      font-weight: 500;
+      font-size: 13px;
       fill: var(--text-muted);
-      letter-spacing: 1px;
+      letter-spacing: 0.5px;
     }
     
-    @keyframes slideRight {
-      0% { transform: translateX(-50px); opacity: 0; }
-      15% { opacity: 1; }
-      85% { opacity: 1; }
-      100% { transform: translateX(880px); opacity: 0; }
+    @keyframes scrollSubtitles {
+      0%, 25% { transform: translateY(0); }
+      33%, 58% { transform: translateY(-24px); }
+      66%, 91% { transform: translateY(-48px); }
+      100% { transform: translateY(0); }
     }
     
-    .animated-line {
-      stroke: var(--line-color);
-      stroke-width: 1.5px;
-      stroke-linecap: round;
-      animation: slideRight 5s infinite ease-in-out;
+    .subtitle-scroll {
+      animation: scrollSubtitles 9s infinite ease-in-out;
+    }
+    
+    /* Blinking terminal cursor */
+    @keyframes blink {
+      0%, 49% { opacity: 1; }
+      50%, 100% { opacity: 0; }
+    }
+    .cursor {
+      fill: var(--accent);
+      animation: blink 1s infinite;
     }
   </style>
 
   <rect width="100%" height="100%" class="bg" rx="8" />
 
   <defs>
+    <!-- Dot Grid -->
     <pattern id="dotGrid" x="0" y="0" width="24" height="24" patternUnits="userSpaceOnUse">
       <circle cx="2" cy="2" r="1.5" fill="var(--grid-color)" />
     </pattern>
   </defs>
   <rect width="100%" height="100%" fill="url(#dotGrid)" rx="8" />
 
-  <!-- Animated Tech Scanning Lines -->
-  <line x1="0" y1="40" x2="80" y2="40" class="animated-line" style="animation-delay: 0s;" />
-  <line x1="0" y1="180" x2="120" y2="180" class="animated-line" style="animation-delay: 2.5s;" />
-  <line x1="0" y1="110" x2="60" y2="110" class="animated-line" style="animation-delay: 1.2s;" />
+  <!-- ================= LEFT SIDE: NEURAL NETWORK GRAPH ================= -->
+  <g transform="translate(10, 10)">
+    <!-- Connections -->
+    <line x1="60" y1="100" x2="110" y2="60" stroke="var(--line-color)" stroke-width="1.5" />
+    <line x1="60" y1="100" x2="110" y2="140" stroke="var(--line-color)" stroke-width="1.5" />
+    <line x1="110" y1="60" x2="170" y2="60" stroke="var(--line-color)" stroke-width="1.5" />
+    <line x1="110" y1="140" x2="170" y2="140" stroke="var(--line-color)" stroke-width="1.5" />
+    <line x1="110" y1="60" x2="110" y2="140" stroke="var(--line-color)" stroke-width="1.5" />
+    <line x1="170" y1="60" x2="220" y2="100" stroke="var(--line-color)" stroke-width="1.5" />
+    <line x1="170" y1="140" x2="220" y2="100" stroke="var(--line-color)" stroke-width="1.5" />
+    <line x1="170" y1="60" x2="170" y2="140" stroke="var(--line-color)" stroke-width="1.5" />
 
-  <!-- Clean Professional Typography -->
-  <g transform="translate(415, 110)">
-    <text x="0" y="-20" text-anchor="middle" class="name">JEPHTHAH KWAME LANOR</text>
-    <text x="0" y="20" text-anchor="middle" class="title">AI Researcher &amp; BSc Computer Engineer</text>
-    <text x="0" y="55" text-anchor="middle" class="details">NATURAL LANGUAGE PROCESSING • LOW-RESOURCE LANGUAGES • FULL-STACK AI</text>
+    <!-- Pulse Signals (AnimateMotion along L-paths) -->
+    <circle r="3" fill="var(--accent)" opacity="0.8">
+      <animateMotion dur="3s" repeatCount="indefinite" path="M 60,100 L 110,60" />
+    </circle>
+    <circle r="3" fill="var(--accent)" opacity="0.8">
+      <animateMotion dur="3.5s" repeatCount="indefinite" path="M 110,140 L 170,140" />
+    </circle>
+    <circle r="3" fill="var(--accent)" opacity="0.8">
+      <animateMotion dur="2.5s" repeatCount="indefinite" path="M 170,60 L 220,100" />
+    </circle>
+    <circle r="3" fill="var(--accent)" opacity="0.8">
+      <animateMotion dur="4s" repeatCount="indefinite" path="M 60,100 L 110,140" />
+    </circle>
+
+    <!-- Nodes -->
+    <circle cx="60" cy="100" r="5" fill="var(--node-color)" stroke="var(--accent)" stroke-width="2" />
+    <circle cx="110" cy="60" r="5" fill="var(--node-color)" stroke="var(--accent)" stroke-width="2" />
+    <circle cx="110" cy="140" r="5" fill="var(--node-color)" stroke="var(--accent)" stroke-width="2" />
+    <circle cx="170" cy="60" r="5" fill="var(--node-color)" stroke="var(--accent)" stroke-width="2" />
+    <circle cx="170" cy="140" r="5" fill="var(--node-color)" stroke="var(--accent)" stroke-width="2" />
+    <circle cx="220" cy="100" r="5" fill="var(--node-color)" stroke="var(--accent)" stroke-width="2" />
   </g>
+
+  <!-- ================= RIGHT SIDE: TYPOGRAPHY ================= -->
+  <g transform="translate(270, 75)">
+    <text x="0" y="0" class="name">JEPHTHAH KWAME LANOR</text>
+    <text x="0" y="28" class="title">AI Researcher &amp; BSc Computer Engineer</text>
+  </g>
+
+  <!-- Terminal Style Scrolling Subtitle Block -->
+  <svg x="270" y="125" width="500" height="24">
+    <g class="subtitle-scroll">
+      <g>
+        <text x="0" y="17" class="details">> NATURAL LANGUAGE PROCESSING</text>
+        <rect x="252" y="4" width="8" height="15" class="cursor" />
+      </g>
+      <g transform="translate(0, 24)">
+        <text x="0" y="17" class="details">> LOW-RESOURCE TRANSLATION</text>
+        <rect x="236" y="4" width="8" height="15" class="cursor" />
+      </g>
+      <g transform="translate(0, 48)">
+        <text x="0" y="17" class="details">> FULL-STACK AI DEPLOYMENT</text>
+        <rect x="242" y="4" width="8" height="15" class="cursor" />
+      </g>
+    </g>
+  </svg>
 </svg>

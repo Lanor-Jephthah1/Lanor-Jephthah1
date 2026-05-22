@@ -1,24 +1,46 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 830 30" width="100%" height="100%">
   <style>
     :root {
-      --base-line: rgba(0, 0, 0, 0.1);
-      --dot-color: #2563eb;
+      --base-line: rgba(0, 0, 0, 0.08);
+      --wave-color: #2563eb;
+      --wave-sec: rgba(37, 99, 235, 0.3);
     }
     @media (prefers-color-scheme: dark) {
       :root {
-        --base-line: rgba(255, 255, 255, 0.1);
-        --dot-color: #60a5fa;
+        --base-line: rgba(255, 255, 255, 0.08);
+        --wave-color: #60a5fa;
+        --wave-sec: rgba(96, 165, 250, 0.3);
       }
     }
-    @keyframes pingPong {
-      0% { transform: translateX(50px); opacity: 0; }
-      10% { opacity: 1; }
-      90% { opacity: 1; }
-      100% { transform: translateX(780px); opacity: 0; }
-    }
-    .line { stroke: var(--base-line); stroke-width: 1px; stroke-linecap: round; }
-    .dot { fill: var(--dot-color); animation: pingPong 4s infinite alternate ease-in-out; }
+    .line { stroke: var(--base-line); stroke-width: 1px; fill: none; }
+    .wave { stroke: var(--wave-color); stroke-width: 1.5px; stroke-linecap: round; fill: none; }
+    .wave-bg { stroke: var(--wave-sec); stroke-width: 1px; stroke-linecap: round; fill: none; }
   </style>
+  
+  <!-- Base straight line (reference signal) -->
   <line x1="50" y1="15" x2="780" y2="15" class="line" />
-  <circle cx="0" cy="15" r="2.5" class="dot" />
+  
+  <!-- Primary active signal wave -->
+  <path class="wave">
+    <animate attributeName="d" 
+             dur="7s" 
+             repeatCount="indefinite"
+             values="
+               M 50,15 Q 141,3 232,15 T 415,15 T 598,15 T 780,15;
+               M 50,15 Q 141,27 232,15 T 415,15 T 598,15 T 780,15;
+               M 50,15 Q 141,3 232,15 T 415,15 T 598,15 T 780,15
+             " />
+  </path>
+  
+  <!-- Secondary out-of-phase background wave -->
+  <path class="wave-bg">
+    <animate attributeName="d" 
+             dur="9s" 
+             repeatCount="indefinite"
+             values="
+               M 50,15 Q 141,24 232,15 T 415,15 T 598,15 T 780,15;
+               M 50,15 Q 141,6 232,15 T 415,15 T 598,15 T 780,15;
+               M 50,15 Q 141,24 232,15 T 415,15 T 598,15 T 780,15
+             " />
+  </path>
 </svg>

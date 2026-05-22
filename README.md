@@ -31,6 +31,10 @@ Experienced in developing end-to-end AI applications, custom-tuning LLMs, and bu
 *   **Research Focus**: Quantized Fine-Tuning (QLoRA), Machine Translation for Ghanaian languages, and Distributed Systems
 *   **Motto**: *Innovating at the intersection of AI, hardware engineering, and language preservation.*
 
+<div align="center">
+  <img src="stats.svg" width="100%" alt="Core Expertise Focus Areas" />
+</div>
+
 ---
 
 ## Technical Arsenal

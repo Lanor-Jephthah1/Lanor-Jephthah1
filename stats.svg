@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 830 140" width="100%" height="100%">
+  <style>
+    :root {
+      --bg-color: #ffffff;
+      --border-color: #e5e7eb;
+      --text-main: #111827;
+      --text-muted: #6b7280;
+      --accent: #2563eb;
+      --track-color: #f3f4f6;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg-color: #0d1117;
+        --border-color: #30363d;
+        --text-main: #f9fafb;
+        --text-muted: #9ca3af;
+        --accent: #60a5fa;
+        --track-color: #1f2937;
+      }
+    }
+    .bg { fill: var(--bg-color); stroke: var(--border-color); stroke-width: 1px; }
+    .label {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      font-weight: 600;
+      font-size: 11px;
+      fill: var(--text-muted);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+    .percent {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      font-weight: 700;
+      font-size: 16px;
+      fill: var(--text-main);
+    }
+    .circle-track {
+      fill: none;
+      stroke: var(--track-color);
+      stroke-width: 6px;
+    }
+    .circle-active {
+      fill: none;
+      stroke: var(--accent);
+      stroke-width: 6px;
+      stroke-linecap: round;
+      transform: rotate(-90deg);
+      transform-origin: center;
+    }
+  </style>
+
+  <rect width="100%" height="100%" class="bg" rx="8" />
+
+  <!-- Gauge 1 (NLP) -->
+  <g transform="translate(160, 60)">
+    <circle cx="0" cy="0" r="35" class="circle-track" />
+    <circle cx="0" cy="0" r="35" class="circle-active" stroke-dasharray="220" stroke-dashoffset="220">
+      <animate attributeName="stroke-dashoffset" dur="1.8s" fill="freeze" values="220; 17.6" />
+    </circle>
+    <text x="0" y="5" text-anchor="middle" class="percent">92%</text>
+    <text x="0" y="55" text-anchor="middle" class="label">NLP &amp; Translation</text>
+  </g>
+
+  <!-- Gauge 2 (Deep Learning) -->
+  <g transform="translate(415, 60)">
+    <circle cx="0" cy="0" r="35" class="circle-track" />
+    <circle cx="0" cy="0" r="35" class="circle-active" stroke-dasharray="220" stroke-dashoffset="220">
+      <animate attributeName="stroke-dashoffset" dur="1.8s" fill="freeze" values="220; 26.4" />
+    </circle>
+    <text x="0" y="5" text-anchor="middle" class="percent">88%</text>
+    <text x="0" y="55" text-anchor="middle" class="label">Deep Learning &amp; LLMs</text>
+  </g>
+
+  <!-- Gauge 3 (Systems Engineering) -->
+  <g transform="translate(670, 60)">
+    <circle cx="0" cy="0" r="35" class="circle-track" />
+    <circle cx="0" cy="0" r="35" class="circle-active" stroke-dasharray="220" stroke-dashoffset="220">
+      <animate attributeName="stroke-dashoffset" dur="1.8s" fill="freeze" values="220; 39.6" />
+    </circle>
+    <text x="0" y="5" text-anchor="middle" class="percent">82%</text>
+    <text x="0" y="55" text-anchor="middle" class="label">Systems &amp; Automation</text>
+  </g>
+</svg>
