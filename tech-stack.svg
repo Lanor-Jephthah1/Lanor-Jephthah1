@@ -1,211 +1,204 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 830 150" width="100%" height="100%">
-  <defs>
-    <!-- Background Gradient for pills -->
-    <linearGradient id="pillBg1" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="rgba(0, 242, 254, 0.15)" />
-      <stop offset="100%" stop-color="rgba(79, 172, 254, 0.05)" />
-    </linearGradient>
-    <linearGradient id="pillBg2" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="rgba(168, 85, 247, 0.15)" />
-      <stop offset="100%" stop-color="rgba(236, 72, 153, 0.05)" />
-    </linearGradient>
-
-    <linearGradient id="pillBorder1" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="rgba(0, 242, 254, 0.5)" />
-      <stop offset="100%" stop-color="rgba(79, 172, 254, 0.2)" />
-    </linearGradient>
-    <linearGradient id="pillBorder2" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="rgba(168, 85, 247, 0.5)" />
-      <stop offset="100%" stop-color="rgba(236, 72, 153, 0.2)" />
-    </linearGradient>
-
-    <!-- Faded edges for the marquee container -->
-    <linearGradient id="fadeEdge" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#0d1117" />
-      <stop offset="5%" stop-color="rgba(13, 17, 23, 0)" />
-      <stop offset="95%" stop-color="rgba(13, 17, 23, 0)" />
-      <stop offset="100%" stop-color="#0d1117" />
-    </linearGradient>
-  </defs>
-
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 830 120" width="100%" height="100%">
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;600&amp;display=swap');
+    :root {
+      --text-main: #374151;
+      --pill-bg: #f3f4f6;
+      --pill-border: #d1d5db;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --text-main: #d1d5db;
+        --pill-bg: #1f2937;
+        --pill-border: #374151;
+      }
+    }
 
     @keyframes scrollLeft {
       0% { transform: translateX(0); }
       100% { transform: translateX(-50%); }
     }
-
     @keyframes scrollRight {
       0% { transform: translateX(-50%); }
       100% { transform: translateX(0); }
     }
 
     .pill-text {
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-      font-weight: 600;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      font-weight: 500;
       font-size: 13px;
-      fill: #e2e8f0;
-      letter-spacing: 1px;
+      fill: var(--text-main);
+      letter-spacing: 0.5px;
+    }
+    
+    .pill-rect {
+      fill: var(--pill-bg);
+      stroke: var(--pill-border);
+      stroke-width: 1px;
     }
 
-    .track1 {
-      animation: scrollLeft 40s linear infinite;
-    }
-
-    .track2 {
-      animation: scrollRight 45s linear infinite;
-    }
+    .track1 { animation: scrollLeft 35s linear infinite; }
+    .track2 { animation: scrollRight 40s linear infinite; }
   </style>
 
-  <rect width="100%" height="100%" fill="none" />
+  <defs>
+    <linearGradient id="fadeMaskGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="rgba(255,255,255,0)" />
+      <stop offset="5%" stop-color="rgba(255,255,255,1)" />
+      <stop offset="95%" stop-color="rgba(255,255,255,1)" />
+      <stop offset="100%" stop-color="rgba(255,255,255,0)" />
+    </linearGradient>
+    <mask id="fadeMask">
+      <rect width="100%" height="100%" fill="url(#fadeMaskGrad)" />
+    </mask>
+  </defs>
 
-  <!-- Track 1 (Top Row) moving left -->
-  <svg x="0" y="20" width="830" height="45">
-    <g class="track1">
-      <!-- Original Set -->
-      <g transform="translate(0, 0)">
-        <rect width="90" height="35" rx="17.5" fill="url(#pillBg1)" stroke="url(#pillBorder1)" stroke-width="1.2" />
-        <text x="45" y="22" text-anchor="middle" class="pill-text">Python</text>
-      </g>
-      <g transform="translate(110, 0)">
-        <rect width="110" height="35" rx="17.5" fill="url(#pillBg2)" stroke="url(#pillBorder2)" stroke-width="1.2" />
-        <text x="55" y="22" text-anchor="middle" class="pill-text">JavaScript</text>
-      </g>
-      <g transform="translate(240, 0)">
-        <rect width="100" height="35" rx="17.5" fill="url(#pillBg1)" stroke="url(#pillBorder1)" stroke-width="1.2" />
-        <text x="50" y="22" text-anchor="middle" class="pill-text">PyTorch</text>
-      </g>
-      <g transform="translate(360, 0)">
-        <rect width="90" height="35" rx="17.5" fill="url(#pillBg2)" stroke="url(#pillBorder2)" stroke-width="1.2" />
-        <text x="45" y="22" text-anchor="middle" class="pill-text">QLoRA</text>
-      </g>
-      <g transform="translate(470, 0)">
-        <rect width="140" height="35" rx="17.5" fill="url(#pillBg1)" stroke="url(#pillBorder1)" stroke-width="1.2" />
-        <text x="70" y="22" text-anchor="middle" class="pill-text">Hugging Face</text>
-      </g>
-      <g transform="translate(630, 0)">
-        <rect width="110" height="35" rx="17.5" fill="url(#pillBg2)" stroke="url(#pillBorder2)" stroke-width="1.2" />
-        <text x="55" y="22" text-anchor="middle" class="pill-text">PostgreSQL</text>
-      </g>
-      <g transform="translate(760, 0)">
-        <rect width="120" height="35" rx="17.5" fill="url(#pillBg1)" stroke="url(#pillBorder1)" stroke-width="1.2" />
-        <text x="60" y="22" text-anchor="middle" class="pill-text">HTML/CSS</text>
-      </g>
-      <g transform="translate(900, 0)">
-        <rect width="100" height="35" rx="17.5" fill="url(#pillBg2)" stroke="url(#pillBorder2)" stroke-width="1.2" />
-        <text x="50" y="22" text-anchor="middle" class="pill-text">MATLAB</text>
-      </g>
+  <rect width="100%" height="100%" fill="transparent" />
 
-      <!-- Duplicated Set (starts exactly at width 1050) -->
-      <g transform="translate(1050, 0)">
-        <rect width="90" height="35" rx="17.5" fill="url(#pillBg1)" stroke="url(#pillBorder1)" stroke-width="1.2" />
-        <text x="45" y="22" text-anchor="middle" class="pill-text">Python</text>
-      </g>
-      <g transform="translate(1160, 0)">
-        <rect width="110" height="35" rx="17.5" fill="url(#pillBg2)" stroke="url(#pillBorder2)" stroke-width="1.2" />
-        <text x="55" y="22" text-anchor="middle" class="pill-text">JavaScript</text>
-      </g>
-      <g transform="translate(1290, 0)">
-        <rect width="100" height="35" rx="17.5" fill="url(#pillBg1)" stroke="url(#pillBorder1)" stroke-width="1.2" />
-        <text x="50" y="22" text-anchor="middle" class="pill-text">PyTorch</text>
-      </g>
-      <g transform="translate(1410, 0)">
-        <rect width="90" height="35" rx="17.5" fill="url(#pillBg2)" stroke="url(#pillBorder2)" stroke-width="1.2" />
-        <text x="45" y="22" text-anchor="middle" class="pill-text">QLoRA</text>
-      </g>
-      <g transform="translate(1520, 0)">
-        <rect width="140" height="35" rx="17.5" fill="url(#pillBg1)" stroke="url(#pillBorder1)" stroke-width="1.2" />
-        <text x="70" y="22" text-anchor="middle" class="pill-text">Hugging Face</text>
-      </g>
-      <g transform="translate(1680, 0)">
-        <rect width="110" height="35" rx="17.5" fill="url(#pillBg2)" stroke="url(#pillBorder2)" stroke-width="1.2" />
-        <text x="55" y="22" text-anchor="middle" class="pill-text">PostgreSQL</text>
-      </g>
-      <g transform="translate(1810, 0)">
-        <rect width="120" height="35" rx="17.5" fill="url(#pillBg1)" stroke="url(#pillBorder1)" stroke-width="1.2" />
-        <text x="60" y="22" text-anchor="middle" class="pill-text">HTML/CSS</text>
-      </g>
-      <g transform="translate(1950, 0)">
-        <rect width="100" height="35" rx="17.5" fill="url(#pillBg2)" stroke="url(#pillBorder2)" stroke-width="1.2" />
-        <text x="50" y="22" text-anchor="middle" class="pill-text">MATLAB</text>
-      </g>
-    </g>
-  </svg>
+  <g mask="url(#fadeMask)">
+    <!-- Track 1 (Top Row) moving left -->
+    <svg x="0" y="10" width="830" height="45">
+      <g class="track1">
+        <!-- Original Set -->
+        <g transform="translate(0, 0)">
+          <rect width="90" height="35" rx="17.5" class="pill-rect" />
+          <text x="45" y="22" text-anchor="middle" class="pill-text">Python</text>
+        </g>
+        <g transform="translate(120, 0)">
+          <rect width="110" height="35" rx="17.5" class="pill-rect" />
+          <text x="55" y="22" text-anchor="middle" class="pill-text">JavaScript</text>
+        </g>
+        <g transform="translate(260, 0)">
+          <rect width="100" height="35" rx="17.5" class="pill-rect" />
+          <text x="50" y="22" text-anchor="middle" class="pill-text">PyTorch</text>
+        </g>
+        <g transform="translate(390, 0)">
+          <rect width="90" height="35" rx="17.5" class="pill-rect" />
+          <text x="45" y="22" text-anchor="middle" class="pill-text">QLoRA</text>
+        </g>
+        <g transform="translate(510, 0)">
+          <rect width="130" height="35" rx="17.5" class="pill-rect" />
+          <text x="65" y="22" text-anchor="middle" class="pill-text">Hugging Face</text>
+        </g>
+        <g transform="translate(670, 0)">
+          <rect width="120" height="35" rx="17.5" class="pill-rect" />
+          <text x="60" y="22" text-anchor="middle" class="pill-text">PostgreSQL</text>
+        </g>
+        <g transform="translate(820, 0)">
+          <rect width="110" height="35" rx="17.5" class="pill-rect" />
+          <text x="55" y="22" text-anchor="middle" class="pill-text">HTML/CSS</text>
+        </g>
+        <g transform="translate(960, 0)">
+          <rect width="90" height="35" rx="17.5" class="pill-rect" />
+          <text x="45" y="22" text-anchor="middle" class="pill-text">MATLAB</text>
+        </g>
 
-  <!-- Track 2 (Bottom Row) moving right -->
-  <svg x="0" y="80" width="830" height="45">
-    <g class="track2">
-      <!-- Original Set -->
-      <g transform="translate(0, 0)">
-        <rect width="110" height="35" rx="17.5" fill="url(#pillBg2)" stroke="url(#pillBorder2)" stroke-width="1.2" />
-        <text x="55" y="22" text-anchor="middle" class="pill-text">AI Agents</text>
+        <!-- Duplicated Set starts at 1080px -->
+        <g transform="translate(1080, 0)">
+          <rect width="90" height="35" rx="17.5" class="pill-rect" />
+          <text x="45" y="22" text-anchor="middle" class="pill-text">Python</text>
+        </g>
+        <g transform="translate(1200, 0)">
+          <rect width="110" height="35" rx="17.5" class="pill-rect" />
+          <text x="55" y="22" text-anchor="middle" class="pill-text">JavaScript</text>
+        </g>
+        <g transform="translate(1340, 0)">
+          <rect width="100" height="35" rx="17.5" class="pill-rect" />
+          <text x="50" y="22" text-anchor="middle" class="pill-text">PyTorch</text>
+        </g>
+        <g transform="translate(1470, 0)">
+          <rect width="90" height="35" rx="17.5" class="pill-rect" />
+          <text x="45" y="22" text-anchor="middle" class="pill-text">QLoRA</text>
+        </g>
+        <g transform="translate(1590, 0)">
+          <rect width="130" height="35" rx="17.5" class="pill-rect" />
+          <text x="65" y="22" text-anchor="middle" class="pill-text">Hugging Face</text>
+        </g>
+        <g transform="translate(1750, 0)">
+          <rect width="120" height="35" rx="17.5" class="pill-rect" />
+          <text x="60" y="22" text-anchor="middle" class="pill-text">PostgreSQL</text>
+        </g>
+        <g transform="translate(1900, 0)">
+          <rect width="110" height="35" rx="17.5" class="pill-rect" />
+          <text x="55" y="22" text-anchor="middle" class="pill-text">HTML/CSS</text>
+        </g>
+        <g transform="translate(2040, 0)">
+          <rect width="90" height="35" rx="17.5" class="pill-rect" />
+          <text x="45" y="22" text-anchor="middle" class="pill-text">MATLAB</text>
+        </g>
       </g>
-      <g transform="translate(130, 0)">
-        <rect width="100" height="35" rx="17.5" fill="url(#pillBg1)" stroke="url(#pillBorder1)" stroke-width="1.2" />
-        <text x="50" y="22" text-anchor="middle" class="pill-text">MongoDB</text>
-      </g>
-      <g transform="translate(250, 0)">
-        <rect width="80" height="35" rx="17.5" fill="url(#pillBg2)" stroke="url(#pillBorder2)" stroke-width="1.2" />
-        <text x="40" y="22" text-anchor="middle" class="pill-text">AWS</text>
-      </g>
-      <g transform="translate(350, 0)">
-        <rect width="80" height="35" rx="17.5" fill="url(#pillBg1)" stroke="url(#pillBorder1)" stroke-width="1.2" />
-        <text x="40" y="22" text-anchor="middle" class="pill-text">Vercel</text>
-      </g>
-      <g transform="translate(450, 0)">
-        <rect width="100" height="35" rx="17.5" fill="url(#pillBg2)" stroke="url(#pillBorder2)" stroke-width="1.2" />
-        <text x="50" y="22" text-anchor="middle" class="pill-text">Firebase</text>
-      </g>
-      <g transform="translate(570, 0)">
-        <rect width="90" height="35" rx="17.5" fill="url(#pillBg1)" stroke="url(#pillBorder1)" stroke-width="1.2" />
-        <text x="45" y="22" text-anchor="middle" class="pill-text">Proteus</text>
-      </g>
-      <g transform="translate(680, 0)">
-        <rect width="100" height="35" rx="17.5" fill="url(#pillBg2)" stroke="url(#pillBorder2)" stroke-width="1.2" />
-        <text x="50" y="22" text-anchor="middle" class="pill-text">AutoCAD</text>
-      </g>
-      <g transform="translate(800, 0)">
-        <rect width="120" height="35" rx="17.5" fill="url(#pillBg1)" stroke="url(#pillBorder1)" stroke-width="1.2" />
-        <text x="60" y="22" text-anchor="middle" class="pill-text">Automation</text>
-      </g>
+    </svg>
 
-      <!-- Duplicated Set starts at 960px width -->
-      <g transform="translate(960, 0)">
-        <rect width="110" height="35" rx="17.5" fill="url(#pillBg2)" stroke="url(#pillBorder2)" stroke-width="1.2" />
-        <text x="55" y="22" text-anchor="middle" class="pill-text">AI Agents</text>
-      </g>
-      <g transform="translate(1090, 0)">
-        <rect width="100" height="35" rx="17.5" fill="url(#pillBg1)" stroke="url(#pillBorder1)" stroke-width="1.2" />
-        <text x="50" y="22" text-anchor="middle" class="pill-text">MongoDB</text>
-      </g>
-      <g transform="translate(1210, 0)">
-        <rect width="80" height="35" rx="17.5" fill="url(#pillBg2)" stroke="url(#pillBorder2)" stroke-width="1.2" />
-        <text x="40" y="22" text-anchor="middle" class="pill-text">AWS</text>
-      </g>
-      <g transform="translate(1310, 0)">
-        <rect width="80" height="35" rx="17.5" fill="url(#pillBg1)" stroke="url(#pillBorder1)" stroke-width="1.2" />
-        <text x="40" y="22" text-anchor="middle" class="pill-text">Vercel</text>
-      </g>
-      <g transform="translate(1410, 0)">
-        <rect width="100" height="35" rx="17.5" fill="url(#pillBg2)" stroke="url(#pillBorder2)" stroke-width="1.2" />
-        <text x="50" y="22" text-anchor="middle" class="pill-text">Firebase</text>
-      </g>
-      <g transform="translate(1530, 0)">
-        <rect width="90" height="35" rx="17.5" fill="url(#pillBg1)" stroke="url(#pillBorder1)" stroke-width="1.2" />
-        <text x="45" y="22" text-anchor="middle" class="pill-text">Proteus</text>
-      </g>
-      <g transform="translate(1640, 0)">
-        <rect width="100" height="35" rx="17.5" fill="url(#pillBg2)" stroke="url(#pillBorder2)" stroke-width="1.2" />
-        <text x="50" y="22" text-anchor="middle" class="pill-text">AutoCAD</text>
-      </g>
-      <g transform="translate(1760, 0)">
-        <rect width="120" height="35" rx="17.5" fill="url(#pillBg1)" stroke="url(#pillBorder1)" stroke-width="1.2" />
-        <text x="60" y="22" text-anchor="middle" class="pill-text">Automation</text>
-      </g>
-    </g>
-  </svg>
+    <!-- Track 2 (Bottom Row) moving right -->
+    <svg x="0" y="65" width="830" height="45">
+      <g class="track2">
+        <!-- Original Set -->
+        <g transform="translate(0, 0)">
+          <rect width="100" height="35" rx="17.5" class="pill-rect" />
+          <text x="50" y="22" text-anchor="middle" class="pill-text">AI Agents</text>
+        </g>
+        <g transform="translate(140, 0)">
+          <rect width="100" height="35" rx="17.5" class="pill-rect" />
+          <text x="50" y="22" text-anchor="middle" class="pill-text">MongoDB</text>
+        </g>
+        <g transform="translate(280, 0)">
+          <rect width="70" height="35" rx="17.5" class="pill-rect" />
+          <text x="35" y="22" text-anchor="middle" class="pill-text">AWS</text>
+        </g>
+        <g transform="translate(390, 0)">
+          <rect width="80" height="35" rx="17.5" class="pill-rect" />
+          <text x="40" y="22" text-anchor="middle" class="pill-text">Vercel</text>
+        </g>
+        <g transform="translate(510, 0)">
+          <rect width="100" height="35" rx="17.5" class="pill-rect" />
+          <text x="50" y="22" text-anchor="middle" class="pill-text">Firebase</text>
+        </g>
+        <g transform="translate(650, 0)">
+          <rect width="90" height="35" rx="17.5" class="pill-rect" />
+          <text x="45" y="22" text-anchor="middle" class="pill-text">Proteus</text>
+        </g>
+        <g transform="translate(780, 0)">
+          <rect width="100" height="35" rx="17.5" class="pill-rect" />
+          <text x="50" y="22" text-anchor="middle" class="pill-text">AutoCAD</text>
+        </g>
+        <g transform="translate(920, 0)">
+          <rect width="120" height="35" rx="17.5" class="pill-rect" />
+          <text x="60" y="22" text-anchor="middle" class="pill-text">Automation</text>
+        </g>
 
-  <!-- Left and Right gradients to fade the marquee edges smoothly into background -->
-  <rect x="0" y="0" width="150" height="150" fill="url(#fadeEdge)" />
+        <!-- Duplicated Set starts at 1080px -->
+        <g transform="translate(1080, 0)">
+          <rect width="100" height="35" rx="17.5" class="pill-rect" />
+          <text x="50" y="22" text-anchor="middle" class="pill-text">AI Agents</text>
+        </g>
+        <g transform="translate(1220, 0)">
+          <rect width="100" height="35" rx="17.5" class="pill-rect" />
+          <text x="50" y="22" text-anchor="middle" class="pill-text">MongoDB</text>
+        </g>
+        <g transform="translate(1360, 0)">
+          <rect width="70" height="35" rx="17.5" class="pill-rect" />
+          <text x="35" y="22" text-anchor="middle" class="pill-text">AWS</text>
+        </g>
+        <g transform="translate(1470, 0)">
+          <rect width="80" height="35" rx="17.5" class="pill-rect" />
+          <text x="40" y="22" text-anchor="middle" class="pill-text">Vercel</text>
+        </g>
+        <g transform="translate(1590, 0)">
+          <rect width="100" height="35" rx="17.5" class="pill-rect" />
+          <text x="50" y="22" text-anchor="middle" class="pill-text">Firebase</text>
+        </g>
+        <g transform="translate(1730, 0)">
+          <rect width="90" height="35" rx="17.5" class="pill-rect" />
+          <text x="45" y="22" text-anchor="middle" class="pill-text">Proteus</text>
+        </g>
+        <g transform="translate(1860, 0)">
+          <rect width="100" height="35" rx="17.5" class="pill-rect" />
+          <text x="50" y="22" text-anchor="middle" class="pill-text">AutoCAD</text>
+        </g>
+        <g transform="translate(2000, 0)">
+          <rect width="120" height="35" rx="17.5" class="pill-rect" />
+          <text x="60" y="22" text-anchor="middle" class="pill-text">Automation</text>
+        </g>
+      </g>
+    </svg>
+  </g>
 </svg>
