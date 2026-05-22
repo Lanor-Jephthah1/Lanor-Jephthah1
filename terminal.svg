@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 830 180" width="100%" height="100%">
+  <style>
+    .terminal-bg { fill: #0d1117; stroke: #30363d; stroke-width: 1px; }
+    .title-bar { fill: #161b22; }
+    .dot-red { fill: #ff5f56; }
+    .dot-yellow { fill: #ffbd2e; }
+    .dot-green { fill: #27c93f; }
+    .terminal-title {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      font-weight: 600;
+      font-size: 11px;
+      fill: #8b949e;
+    }
+    .log {
+      font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+      font-size: 12px;
+      fill: #c9d1d9;
+    }
+    .log-success { fill: #58a6ff; }
+    .log-warning { fill: #d29922; }
+    .log-highlight { fill: #56d364; }
+    
+    @keyframes scrollLogs {
+      0%, 15% { transform: translateY(0); }
+      20%, 35% { transform: translateY(-18px); }
+      40%, 55% { transform: translateY(-36px); }
+      60%, 75% { transform: translateY(-54px); }
+      80%, 95% { transform: translateY(-72px); }
+      100% { transform: translateY(0); }
+    }
+    
+    .log-scroll {
+      animation: scrollLogs 12s infinite cubic-bezier(0.25, 1, 0.5, 1);
+    }
+    
+    @keyframes terminalBlink {
+      0%, 49% { opacity: 1; }
+      50%, 100% { opacity: 0; }
+    }
+    .t-cursor { fill: #58a6ff; animation: terminalBlink 1s infinite; }
+  </style>
+
+  <rect width="100%" height="100%" class="terminal-bg" rx="6" />
+  <path d="M 0,6 Q 0,0 6,0 L 824,0 Q 830,0 830,6 L 830,28 L 0,28 Z" class="title-bar" />
+  
+  <!-- Window Buttons -->
+  <circle cx="20" cy="14" r="5" class="dot-red" />
+  <circle cx="36" cy="14" r="5" class="dot-yellow" />
+  <circle cx="52" cy="14" r="5" class="dot-green" />
+  <text x="415" y="18" text-anchor="middle" class="terminal-title">lanor-jephthah@gpu-node-01: ~/nlp-models</text>
+
+  <!-- Scrolling Logs Console -->
+  <svg x="20" y="42" width="790" height="120">
+    <g class="log-scroll">
+      <text x="0" y="15" class="log"><tspan class="log-success">mclanorjeff$</tspan> python train.py --model nllb-200-twi-qlora --epochs 5</text>
+      <text x="0" y="33" class="log">[System Check]: CUDA Device: NVIDIA RTX 4090 | Status: <tspan class="log-highlight">ACTIVE</tspan></text>
+      <text x="0" y="51" class="log">[Tokenizer]: Loading custom polished Twi-English vocabulary... Done (250,000 tokens)</text>
+      <text x="0" y="69" class="log">[Base Model]: Loading Meta NLLB-200 in 4-bit NF4 quantization... Loaded successfully.</text>
+      <text x="0" y="87" class="log">[Training]: Epoch 1/5 | Step 5000/25000 | Loss: 0.1425 | LR: 2e-5</text>
+      <text x="0" y="105" class="log">[Training]: Epoch 2/5 | Step 10000/25000 | Loss: 0.1082 | LR: 1.8e-5</text>
+      <text x="0" y="123" class="log">[Training]: Epoch 3/5 | Step 15000/25000 | Loss: <tspan class="log-highlight">0.0842</tspan> | LR: 1.5e-5</text>
+      <text x="0" y="141" class="log">[Evaluation]: Running validation... BLEU Score: <tspan class="log-highlight">24.8</tspan> | ChrF++: <tspan class="log-highlight">56.4</tspan></text>
+      <text x="0" y="159" class="log">[Checkpoint]: Saving QLoRA adapter checkpoints to ./weights... Saved.</text>
+      <text x="0" y="177" class="log">[Status]: Training loop running dynamically... <tspan class="log-success">ACTIVE</tspan></text>
+    </g>
+  </svg>
+</svg>

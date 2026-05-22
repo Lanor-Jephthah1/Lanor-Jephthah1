@@ -4,15 +4,15 @@
   
   <br/>
   
-  <!-- Interactive Connect Badges -->
+  <!-- Custom Sleek Navigation & Social Badges -->
   <a href="mailto:mclanorjeff@gmail.com">
-    <img src="https://img.shields.io/badge/Email-mclanorjeff%40gmail.com-00f2fe?style=for-the-badge&logo=gmail&logoColor=black&labelColor=0d0c1d&shadow=true" alt="Email" />
+    <img src="badge-email.svg" width="200" height="36" alt="Email" />
   </a>
   <a href="https://linkedin.com/in/lanor-jephthah">
-    <img src="https://img.shields.io/badge/LinkedIn-Lanor--Jephthah-4facfe?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=0d0c1d" alt="LinkedIn" />
+    <img src="badge-linkedin.svg" width="200" height="36" alt="LinkedIn" />
   </a>
   <a href="https://github.com/lanor-jephthah1">
-    <img src="https://img.shields.io/badge/GitHub-Lanor--Jephthah1-a855f7?style=for-the-badge&logo=github&logoColor=white&labelColor=0d0c1d" alt="GitHub" />
+    <img src="badge-github.svg" width="200" height="36" alt="GitHub" />
   </a>
 </div>
 
@@ -55,6 +55,10 @@ Experienced in developing end-to-end AI applications, custom-tuning LLMs, and bu
 *   **Technologies**: Python, PyTorch, Hugging Face `transformers`, Peft (QLoRA), NLLB-200.
 *   **Features**: Fine-tuned Meta's No Language Left Behind (NLLB) model using quantized parameter-efficient tuning. Leveraged a custom-polished bilingual corpus to optimize BLEU and ChrF scores for low-resource translation. Includes interactive Gradio interface.
 
+<div align="center">
+  <img src="pipeline.svg" width="100%" alt="NLLB-Twi-QLoRA System Pipeline Architecture" />
+</div>
+
 ### Echo AI – Companion Chatbot
 *A highly responsive, contextual AI companion built for natural, real-time conversations.*
 *   **Technologies**: Next.js, Node.js, Vercel, TailwindCSS, LLM APIs.
@@ -94,6 +98,13 @@ This repository hosts an automated local toolkit built to streamline Windows des
     ```
 
 </details>
+
+<br/>
+
+<!-- Terminal Training Log Live Monitor -->
+<div align="center">
+  <img src="terminal.svg" width="100%" alt="Deep Learning Model Training Console Monitor" />
+</div>
 
 <br/>
 

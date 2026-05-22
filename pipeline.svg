@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 830 160" width="100%" height="100%">
+  <style>
+    :root {
+      --bg: #ffffff;
+      --border: #e5e7eb;
+      --text: #111827;
+      --text-muted: #6b7280;
+      --accent: #2563eb;
+      --arrow-color: rgba(37, 99, 235, 0.2);
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0d1117;
+        --border: #30363d;
+        --text: #f9fafb;
+        --text-muted: #9ca3af;
+        --accent: #60a5fa;
+        --arrow-color: rgba(96, 165, 250, 0.2);
+      }
+    }
+    .bg { fill: var(--bg); stroke: var(--border); stroke-width: 1px; }
+    .box { fill: var(--bg); stroke: var(--border); stroke-width: 1.5px; }
+    .box-title {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      font-weight: 700;
+      font-size: 11px;
+      fill: var(--text);
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+    .box-subtitle {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      font-weight: 500;
+      font-size: 9px;
+      fill: var(--text-muted);
+    }
+    .arrow-line {
+      stroke: var(--arrow-color);
+      stroke-width: 2px;
+      stroke-dasharray: 4,4;
+    }
+  </style>
+  <rect width="100%" height="100%" class="bg" rx="8" />
+  
+  <!-- Flow Lines -->
+  <line x1="190" y1="80" x2="240" y2="80" class="arrow-line" />
+  <line x1="390" y1="80" x2="440" y2="80" class="arrow-line" />
+  <line x1="590" y1="80" x2="640" y2="80" class="arrow-line" />
+  
+  <!-- Flow Pulses -->
+  <circle r="3.5" fill="var(--accent)">
+    <animateMotion dur="2.2s" repeatCount="indefinite" path="M 190,80 L 240,80" />
+  </circle>
+  <circle r="3.5" fill="var(--accent)">
+    <animateMotion dur="1.8s" repeatCount="indefinite" path="M 390,80 L 440,80" />
+  </circle>
+  <circle r="3.5" fill="var(--accent)">
+    <animateMotion dur="2s" repeatCount="indefinite" path="M 590,80 L 640,80" />
+  </circle>
+
+  <!-- Box 1 -->
+  <rect x="40" y="50" width="150" height="60" class="box" rx="6" />
+  <text x="115" y="77" text-anchor="middle" class="box-title">1. Raw Dataset</text>
+  <text x="115" y="93" text-anchor="middle" class="box-subtitle">Twi-English Bilingual Corpus</text>
+
+  <!-- Box 2 -->
+  <rect x="240" y="50" width="150" height="60" class="box" rx="6" />
+  <text x="315" y="77" text-anchor="middle" class="box-title">2. Quantization</text>
+  <text x="315" y="93" text-anchor="middle" class="box-subtitle">4-Bit NF4 Base Model Loading</text>
+
+  <!-- Box 3 -->
+  <rect x="440" y="50" width="150" height="60" class="box" rx="6" />
+  <text x="515" y="77" text-anchor="middle" class="box-title">3. QLoRA Adapter</text>
+  <text x="515" y="93" text-anchor="middle" class="box-subtitle">Parameter-Efficient Tuning</text>
+
+  <!-- Box 4 -->
+  <rect x="640" y="50" width="150" height="60" class="box" rx="6" />
+  <text x="715" y="77" text-anchor="middle" class="box-title">4. Evaluation</text>
+  <text x="715" y="93" text-anchor="middle" class="box-subtitle">BLEU Score &amp; Gradio Deploy</text>
+</svg>
