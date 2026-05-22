@@ -1,0 +1,235 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 830 150" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient for pills -->
+    <linearGradient id="pillBg1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="rgba(0, 242, 254, 0.15)" />
+      <stop offset="100%" stop-color="rgba(79, 172, 254, 0.05)" />
+    </linearGradient>
+    <linearGradient id="pillBg2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="rgba(168, 85, 247, 0.15)" />
+      <stop offset="100%" stop-color="rgba(236, 72, 153, 0.05)" />
+    </linearGradient>
+
+    <linearGradient id="pillBorder1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="rgba(0, 242, 254, 0.5)" />
+      <stop offset="100%" stop-color="rgba(79, 172, 254, 0.2)" />
+    </linearGradient>
+    <linearGradient id="pillBorder2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="rgba(168, 85, 247, 0.5)" />
+      <stop offset="100%" stop-color="rgba(236, 72, 153, 0.2)" />
+    </linearGradient>
+
+    <!-- Faded edges for the marquee container -->
+    <linearGradient id="fadeEdge" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0d1117" />
+      <stop offset="5%" stop-color="rgba(13, 17, 23, 0)" />
+      <stop offset="95%" stop-color="rgba(13, 17, 23, 0)" />
+      <stop offset="100%" stop-color="#0d1117" />
+    </linearGradient>
+  </defs>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;600&amp;display=swap');
+
+    @keyframes scrollLeft {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    @keyframes scrollRight {
+      0% { transform: translateX(-50%); }
+      100% { transform: translateX(0); }
+    }
+
+    .pill-text {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      font-weight: 600;
+      font-size: 13px;
+      fill: #e2e8f0;
+      letter-spacing: 1px;
+    }
+
+    .pill-text-icon {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      font-weight: 500;
+      font-size: 14px;
+    }
+
+    .track1 {
+      animation: scrollLeft 40s linear infinite;
+    }
+
+    .track2 {
+      animation: scrollRight 45s linear infinite;
+    }
+  </style>
+
+  <rect width="100%" height="100%" fill="none" />
+
+  <!-- Track 1 (Top Row) moving left -->
+  <svg x="0" y="20" width="830" height="45">
+    <g class="track1">
+      <!-- We create a sequence of pills that takes up e.g. 1200px, and then duplicate it exactly so it loops. -->
+      <!-- Original Set -->
+      <g transform="translate(0, 0)">
+        <!-- Python -->
+        <rect width="110" height="35" rx="17.5" fill="url(#pillBg1)" stroke="url(#pillBorder1)" stroke-width="1.2" />
+        <text x="55" y="22" text-anchor="middle" class="pill-text"><tspan class="pill-text-icon">🐍</tspan> Python</text>
+      </g>
+      <g transform="translate(130, 0)">
+        <!-- JS -->
+        <rect width="130" height="35" rx="17.5" fill="url(#pillBg2)" stroke="url(#pillBorder2)" stroke-width="1.2" />
+        <text x="65" y="22" text-anchor="middle" class="pill-text"><tspan class="pill-text-icon">⚡</tspan> JavaScript</text>
+      </g>
+      <g transform="translate(280, 0)">
+        <!-- Pytorch -->
+        <rect width="120" height="35" rx="17.5" fill="url(#pillBg1)" stroke="url(#pillBorder1)" stroke-width="1.2" />
+        <text x="60" y="22" text-anchor="middle" class="pill-text"><tspan class="pill-text-icon">🔥</tspan> PyTorch</text>
+      </g>
+      <g transform="translate(420, 0)">
+        <!-- QLoRA -->
+        <rect width="110" height="35" rx="17.5" fill="url(#pillBg2)" stroke="url(#pillBorder2)" stroke-width="1.2" />
+        <text x="55" y="22" text-anchor="middle" class="pill-text"><tspan class="pill-text-icon">🧠</tspan> QLoRA</text>
+      </g>
+      <g transform="translate(550, 0)">
+        <!-- Hugging Face -->
+        <rect width="160" height="35" rx="17.5" fill="url(#pillBg1)" stroke="url(#pillBorder1)" stroke-width="1.2" />
+        <text x="80" y="22" text-anchor="middle" class="pill-text"><tspan class="pill-text-icon">🤗</tspan> Hugging Face</text>
+      </g>
+      <g transform="translate(730, 0)">
+        <!-- PostgreSQL -->
+        <rect width="130" height="35" rx="17.5" fill="url(#pillBg2)" stroke="url(#pillBorder2)" stroke-width="1.2" />
+        <text x="65" y="22" text-anchor="middle" class="pill-text"><tspan class="pill-text-icon">🐘</tspan> PostgreSQL</text>
+      </g>
+      <g transform="translate(880, 0)">
+        <!-- Web -->
+        <rect width="140" height="35" rx="17.5" fill="url(#pillBg1)" stroke="url(#pillBorder1)" stroke-width="1.2" />
+        <text x="70" y="22" text-anchor="middle" class="pill-text"><tspan class="pill-text-icon">🌐</tspan> HTML/CSS</text>
+      </g>
+      <g transform="translate(1040, 0)">
+        <!-- Math -->
+        <rect width="120" height="35" rx="17.5" fill="url(#pillBg2)" stroke="url(#pillBorder2)" stroke-width="1.2" />
+        <text x="60" y="22" text-anchor="middle" class="pill-text"><tspan class="pill-text-icon">📐</tspan> MATLAB</text>
+      </g>
+
+      <!-- Duplicated Set (starts exactly at width 1180) -->
+      <!-- Let's make the total width of one set 1200px. The next transform should start at 1200. -->
+      <g transform="translate(1200, 0)">
+        <!-- Python -->
+        <rect width="110" height="35" rx="17.5" fill="url(#pillBg1)" stroke="url(#pillBorder1)" stroke-width="1.2" />
+        <text x="55" y="22" text-anchor="middle" class="pill-text"><tspan class="pill-text-icon">🐍</tspan> Python</text>
+      </g>
+      <g transform="translate(1330, 0)">
+        <!-- JS -->
+        <rect width="130" height="35" rx="17.5" fill="url(#pillBg2)" stroke="url(#pillBorder2)" stroke-width="1.2" />
+        <text x="65" y="22" text-anchor="middle" class="pill-text"><tspan class="pill-text-icon">⚡</tspan> JavaScript</text>
+      </g>
+      <g transform="translate(1480, 0)">
+        <!-- Pytorch -->
+        <rect width="120" height="35" rx="17.5" fill="url(#pillBg1)" stroke="url(#pillBorder1)" stroke-width="1.2" />
+        <text x="60" y="22" text-anchor="middle" class="pill-text"><tspan class="pill-text-icon">🔥</tspan> PyTorch</text>
+      </g>
+      <g transform="translate(1620, 0)">
+        <!-- QLoRA -->
+        <rect width="110" height="35" rx="17.5" fill="url(#pillBg2)" stroke="url(#pillBorder2)" stroke-width="1.2" />
+        <text x="55" y="22" text-anchor="middle" class="pill-text"><tspan class="pill-text-icon">🧠</tspan> QLoRA</text>
+      </g>
+      <g transform="translate(1750, 0)">
+        <!-- Hugging Face -->
+        <rect width="160" height="35" rx="17.5" fill="url(#pillBg1)" stroke="url(#pillBorder1)" stroke-width="1.2" />
+        <text x="80" y="22" text-anchor="middle" class="pill-text"><tspan class="pill-text-icon">🤗</tspan> Hugging Face</text>
+      </g>
+      <g transform="translate(1930, 0)">
+        <!-- PostgreSQL -->
+        <rect width="130" height="35" rx="17.5" fill="url(#pillBg2)" stroke="url(#pillBorder2)" stroke-width="1.2" />
+        <text x="65" y="22" text-anchor="middle" class="pill-text"><tspan class="pill-text-icon">🐘</tspan> PostgreSQL</text>
+      </g>
+      <g transform="translate(2080, 0)">
+        <!-- Web -->
+        <rect width="140" height="35" rx="17.5" fill="url(#pillBg1)" stroke="url(#pillBorder1)" stroke-width="1.2" />
+        <text x="70" y="22" text-anchor="middle" class="pill-text"><tspan class="pill-text-icon">🌐</tspan> HTML/CSS</text>
+      </g>
+      <g transform="translate(2240, 0)">
+        <!-- Math -->
+        <rect width="120" height="35" rx="17.5" fill="url(#pillBg2)" stroke="url(#pillBorder2)" stroke-width="1.2" />
+        <text x="60" y="22" text-anchor="middle" class="pill-text"><tspan class="pill-text-icon">📐</tspan> MATLAB</text>
+      </g>
+    </g>
+  </svg>
+
+  <!-- Track 2 (Bottom Row) moving right -->
+  <svg x="0" y="80" width="830" height="45">
+    <g class="track2">
+      <!-- Original Set -->
+      <g transform="translate(0, 0)">
+        <rect width="140" height="35" rx="17.5" fill="url(#pillBg2)" stroke="url(#pillBorder2)" stroke-width="1.2" />
+        <text x="70" y="22" text-anchor="middle" class="pill-text"><tspan class="pill-text-icon">🤖</tspan> AI Agents</text>
+      </g>
+      <g transform="translate(160, 0)">
+        <rect width="120" height="35" rx="17.5" fill="url(#pillBg1)" stroke="url(#pillBorder1)" stroke-width="1.2" />
+        <text x="60" y="22" text-anchor="middle" class="pill-text"><tspan class="pill-text-icon">🍃</tspan> MongoDB</text>
+      </g>
+      <g transform="translate(300, 0)">
+        <rect width="110" height="35" rx="17.5" fill="url(#pillBg2)" stroke="url(#pillBorder2)" stroke-width="1.2" />
+        <text x="55" y="22" text-anchor="middle" class="pill-text"><tspan class="pill-text-icon">☁️</tspan> AWS</text>
+      </g>
+      <g transform="translate(430, 0)">
+        <rect width="110" height="35" rx="17.5" fill="url(#pillBg1)" stroke="url(#pillBorder1)" stroke-width="1.2" />
+        <text x="55" y="22" text-anchor="middle" class="pill-text"><tspan class="pill-text-icon">▲</tspan> Vercel</text>
+      </g>
+      <g transform="translate(560, 0)">
+        <rect width="130" height="35" rx="17.5" fill="url(#pillBg2)" stroke="url(#pillBorder2)" stroke-width="1.2" />
+        <text x="65" y="22" text-anchor="middle" class="pill-text"><tspan class="pill-text-icon">🔥</tspan> Firebase</text>
+      </g>
+      <g transform="translate(710, 0)">
+        <rect width="130" height="35" rx="17.5" fill="url(#pillBg1)" stroke="url(#pillBorder1)" stroke-width="1.2" />
+        <text x="65" y="22" text-anchor="middle" class="pill-text"><tspan class="pill-text-icon">🔌</tspan> Proteus</text>
+      </g>
+      <g transform="translate(860, 0)">
+        <rect width="120" height="35" rx="17.5" fill="url(#pillBg2)" stroke="url(#pillBorder2)" stroke-width="1.2" />
+        <text x="60" y="22" text-anchor="middle" class="pill-text"><tspan class="pill-text-icon">⚙️</tspan> AutoCAD</text>
+      </g>
+      <g transform="translate(1000, 0)">
+        <rect width="150" height="35" rx="17.5" fill="url(#pillBg1)" stroke="url(#pillBorder1)" stroke-width="1.2" />
+        <text x="75" y="22" text-anchor="middle" class="pill-text"><tspan class="pill-text-icon">💻</tspan> Automation</text>
+      </g>
+
+      <!-- Duplicated Set starts at 1200px width -->
+      <g transform="translate(1200, 0)">
+        <rect width="140" height="35" rx="17.5" fill="url(#pillBg2)" stroke="url(#pillBorder2)" stroke-width="1.2" />
+        <text x="70" y="22" text-anchor="middle" class="pill-text"><tspan class="pill-text-icon">🤖</tspan> AI Agents</text>
+      </g>
+      <g transform="translate(1360, 0)">
+        <rect width="120" height="35" rx="17.5" fill="url(#pillBg1)" stroke="url(#pillBorder1)" stroke-width="1.2" />
+        <text x="60" y="22" text-anchor="middle" class="pill-text"><tspan class="pill-text-icon">🍃</tspan> MongoDB</text>
+      </g>
+      <g transform="translate(1500, 0)">
+        <rect width="110" height="35" rx="17.5" fill="url(#pillBg2)" stroke="url(#pillBorder2)" stroke-width="1.2" />
+        <text x="55" y="22" text-anchor="middle" class="pill-text"><tspan class="pill-text-icon">☁️</tspan> AWS</text>
+      </g>
+      <g transform="translate(1630, 0)">
+        <rect width="110" height="35" rx="17.5" fill="url(#pillBg1)" stroke="url(#pillBorder1)" stroke-width="1.2" />
+        <text x="55" y="22" text-anchor="middle" class="pill-text"><tspan class="pill-text-icon">▲</tspan> Vercel</text>
+      </g>
+      <g transform="translate(1760, 0)">
+        <rect width="130" height="35" rx="17.5" fill="url(#pillBg2)" stroke="url(#pillBorder2)" stroke-width="1.2" />
+        <text x="65" y="22" text-anchor="middle" class="pill-text"><tspan class="pill-text-icon">🔥</tspan> Firebase</text>
+      </g>
+      <g transform="translate(1910, 0)">
+        <rect width="130" height="35" rx="17.5" fill="url(#pillBg1)" stroke="url(#pillBorder1)" stroke-width="1.2" />
+        <text x="65" y="22" text-anchor="middle" class="pill-text"><tspan class="pill-text-icon">🔌</tspan> Proteus</text>
+      </g>
+      <g transform="translate(2060, 0)">
+        <rect width="120" height="35" rx="17.5" fill="url(#pillBg2)" stroke="url(#pillBorder2)" stroke-width="1.2" />
+        <text x="60" y="22" text-anchor="middle" class="pill-text"><tspan class="pill-text-icon">⚙️</tspan> AutoCAD</text>
+      </g>
+      <g transform="translate(2200, 0)">
+        <rect width="150" height="35" rx="17.5" fill="url(#pillBg1)" stroke="url(#pillBorder1)" stroke-width="1.2" />
+        <text x="75" y="22" text-anchor="middle" class="pill-text"><tspan class="pill-text-icon">💻</tspan> Automation</text>
+      </g>
+    </g>
+  </svg>
+
+  <!-- Left and Right gradients to fade the marquee edges smoothly into background -->
+  <rect x="0" y="0" width="150" height="150" fill="url(#fadeEdge)" />
+</svg>

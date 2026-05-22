@@ -35,45 +35,8 @@ Experienced in developing end-to-end AI applications, custom-tuning LLMs, and bu
 
 ## 🛠️ Technical Arsenal
 
-<div align="left">
-  <table>
-    <tr>
-      <td valign="top" width="50%">
-        <strong>💻 Programming Languages &amp; Core</strong><br/>
-        <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python" />
-        <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" alt="JavaScript" />
-        <img src="https://img.shields.io/badge/MATLAB-ED1C24?style=flat-square&logo=mathworks&logoColor=white" alt="MATLAB" />
-        <img src="https://img.shields.io/badge/SQL-4479A1?style=flat-square&logo=postgresql&logoColor=white" alt="SQL" />
-        <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white" alt="HTML5" />
-        <img src="https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white" alt="CSS3" />
-      </td>
-      <td valign="top" width="50%">
-        <strong>🧠 Machine Learning &amp; NLP</strong><br/>
-        <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white" alt="PyTorch" />
-        <img src="https://img.shields.io/badge/Hugging_Face-FFD21E?style=flat-square&logo=huggingface&logoColor=black" alt="Hugging Face" />
-        <img src="https://img.shields.io/badge/QLoRA%20/%20LoRA-a855f7?style=flat-square" alt="QLoRA" />
-        <img src="https://img.shields.io/badge/LLM_Finetuning-00f2fe?style=flat-square" alt="LLM Finetuning" />
-        <img src="https://img.shields.io/badge/Data_Analytics-4facfe?style=flat-square" alt="Data Analytics" />
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" width="50%">
-        <strong>🗄️ Databases &amp; Cloud Deployment</strong><br/>
-        <img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white" alt="PostgreSQL" />
-        <img src="https://img.shields.io/badge/MongoDB-47A248?style=flat-square&logo=mongodb&logoColor=white" alt="MongoDB" />
-        <img src="https://img.shields.io/badge/AWS-232F3E?style=flat-square&logo=amazon-aws&logoColor=white" alt="AWS" />
-        <img src="https://img.shields.io/badge/Vercel-000000?style=flat-square&logo=vercel&logoColor=white" alt="Vercel" />
-        <img src="https://img.shields.io/badge/Firebase-FFCA28?style=flat-square&logo=firebase&logoColor=black" alt="Firebase" />
-      </td>
-      <td valign="top" width="50%">
-        <strong>🔌 Hardware &amp; Automation</strong><br/>
-        <img src="https://img.shields.io/badge/AutoCAD-E2231A?style=flat-square&logo=autodesk&logoColor=white" alt="AutoCAD" />
-        <img src="https://img.shields.io/badge/Proteus-0052cc?style=flat-square" alt="Proteus Simulation" />
-        <img src="https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white" alt="Git" />
-        <img src="https://img.shields.io/badge/Windows_Automation-0078D6?style=flat-square&logo=windows&logoColor=white" alt="Windows Automation" />
-      </td>
-    </tr>
-  </table>
+<div align="center">
+  <img src="tech-stack.svg" width="100%" alt="Technical Stack Marquee" />
 </div>
 
 <br/>

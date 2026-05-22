@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 830 65" width="100%" height="100%">
   <defs>
-    <!-- Bubble radial gradient for natural lighting & refraction -->
+    <!-- Bubble radial gradient for natural lighting and refraction -->
     <radialGradient id="bubbleDividerGrad" cx="35%" cy="35%" r="65%">
       <stop offset="0%" stop-color="rgba(255, 255, 255, 0.4)" />
       <stop offset="30%" stop-color="rgba(0, 242, 254, 0.22)" />
@@ -10,7 +10,7 @@
   </defs>
 
   <style>
-    /* Bubble ascending float & side drift keyframe animation */
+    /* Bubble ascending float and side drift keyframe animation */
     @keyframes floatUpDivider {
       0% { transform: translateY(75px) translateX(0); opacity: 0; }
       15% { opacity: 0.65; }
